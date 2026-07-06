@@ -22,11 +22,8 @@ indexRouter.get("/new", (req, res) => {
   res.render("form");
 });
 
-indexRouter.get("/message", (req, res) => {
-  let params = new URLSearchParams(req.url);
-  let txt = params.values().next().value;
-  
-  res.render("message", { txt: txt });
+indexRouter.post("/message", (req, res) => {  
+  res.render("message", { txt: req.body.txt });
 });
 
 indexRouter.post("/new", (req, res) => {
