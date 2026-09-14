@@ -8,7 +8,7 @@
 <body>
   <ul>
     <% messages.forEach(msg => { %>
-      <li><%= msg.user %> <%= msg.text %> <%= msg.added %> 
+      <li><%= msg.username %> <%= msg.text %> <%= msg.added %> 
       <form action="/message" method="post">
         <input type="hidden" name="txt" value="<%= msg.text%>"/>
         <input type="submit" value="Open">
