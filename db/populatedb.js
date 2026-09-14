@@ -20,7 +20,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: process.env.EXTERNAL_DATABASE_URL,
+    connectionString: process.env.DATABASE_URL,
   });
   console.log("plm");
   await client.connect();
